@@ -1,10 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Delius+Unicase:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crafty+Girls&display=swap');
+
 :root {
-    --color-primary: #4B69FD;
-    --color-secondary: #FFF9EB;
-    --color-tertiary: #C4C4C4;
-    --color-button: #fe652b;
-    --color-button-hover: #e55720;
-    --color-text: #444444;
+    --color-primary: #9d5cff;
+    --color-secondary: #fff5e1;
+    --color-tertiary: #ffc75f;
+    --color-button: #ff6b81;
+    --color-button-hover: #f53350;
+    --color-text: #333333;
     --color-white: #FFFFFF;
 }
 
@@ -17,7 +22,7 @@
 
 body {
     height: 100vh;
-    background-color: var(--color-primary);
+    background: linear-gradient(#9D5CFF, #C39DFF, #E5D4FF);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,7 +48,6 @@ body {
 .input-section {
     flex: 60%;
     background-color: var(--color-secondary);
-    border: 1px solid #000;
     border-radius: 64px 64px 0 0;
     display: flex;
     flex-direction: column;
@@ -54,15 +58,23 @@ body {
 
 /* Títulos */
 .main-title {
+    margin-left: 25px;
+    padding-right: 10px;
     font-size: 48px;
-    font-family: "Merriweather", serif;
+    font-family: "Kaushan Script", serif;
     font-weight: 900;
     font-style: italic;
     color: var(--color-white);
 }
 
+.amigos{
+    width: 20%;
+    margin-right: 25px;
+    padding-left: 10px;
+}
+
 .section-title {
-    font-family: "Inter", serif;
+    font-family: "Crafty Girls", serif;
     font-size: 36px;
     font-weight: 700;
     color: var(--color-primary);
@@ -84,6 +96,7 @@ body {
     padding: 10px;
     border: 2px solid #000;
     border-radius: 25px 0 0 25px;
+    font-family: "Delius Swash Caps", serif;
     font-size: 16px;
 }
 
@@ -100,18 +113,18 @@ body {
     border: 2px solid #333;
     border-right: none;
     border-radius: 25px 0 0 25px;
-    font-family: "Merriweather", serif;
+    font-family: "Delius Swash Caps", serif;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Estilos de botón */
 button {
     padding: 15px 30px;
-    font-family: "Inter", sans-serif;
+    font-family: "Delius Swash Caps", serif;
     font-size: 16px;
     border: 2px solid #000;
     border-radius: 25px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.3);
     cursor: pointer;
 }
 
@@ -119,10 +132,12 @@ button {
     background-color: var(--color-tertiary);
     color: var(--color-text);
     border-radius: 0 25px 25px 0;
+    border-color: #eea51f;
 }
 
 .button-add:hover {
-    background-color: #a1a1a1;
+    background-color: #eea51f;
+    border-color: #ac7208;
 }
 
 /* Listas */
@@ -140,6 +155,7 @@ ul {
     font-size: 22px;
     font-weight: bold;
     text-align: center;
+    font-family: "Delius Unicase", serif;
 }
 
 /* Botón de sortear título */
@@ -150,6 +166,8 @@ ul {
     padding: 10px 40px;
     color: var(--color-white);
     background-color: var(--color-button);
+    border-color: #dd495f;
+    font-family: "Delius Swash Caps", serif;
     font-size: 16px;
 }
 
@@ -159,4 +177,11 @@ ul {
 
 .button-draw:hover {
     background-color: var(--color-button-hover);
+    border-color: #E10022;
+}
+
+@media (max-width:768px){
+    .amigos{
+        width: 45%;
+    }
 }
