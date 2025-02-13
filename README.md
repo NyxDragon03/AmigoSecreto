@@ -28,8 +28,3 @@ Para evitar esto la página te pregunta si este es tu nombre y hace un nuevo sor
 ✔ Puedes sortear varios grupos.    
 Una vez que todos los nombres en la lista actual han sido sorteados, un botón nuevo se hace presente para dar la opción de volver todo de cero y hacer un nuevo sorteo con una lista diferente.
 ![Demostración](assets/reinicio.gif)    
-
-## 📦 Instalación y uso  
-1. Descarga o clona este repositorio:  
-   ```sh
-   git clone https://github.com/NyxDragon03/amigo-secreto.git
