@@ -45,6 +45,12 @@ function actualizarLista(){
 let sortear = false; //controlar si es el primer sorteo
 
 function sortearAmigo() {
+
+    if (participantes.length === 0 && !sortear){
+        alert("Aún no has añadido ningún participante.");
+        return;
+    }
+
     if (!sortear && participantes.length < 3) { 
         alert("Debe haber al menos 3 participantes para iniciar el sorteo.");
         return;
