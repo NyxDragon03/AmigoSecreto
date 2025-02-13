@@ -41,3 +41,41 @@ function actualizarLista(){
         lista.appendChild(item);
     }
 };
+
+let sortear = false; //controlar si es el primer sorteo
+
+function sortearAmigo() {
+    if (!sortear && participantes.length < 3) { 
+        alert("Debe haber al menos 3 participantes para iniciar el sorteo.");
+        return;
+    }
+
+    sortear = true; //ya no se valida la cantidad de participantes
+
+    if (participantes.length === 0) { 
+        alert("No hay más participantes para sortear.");
+        return;
+    }
+
+    let indice = Math.floor(Math.random() * participantes.length);
+    let amigoSecreto = participantes[indice];
+
+    let jugador = confirm(`¿Eres ${amigoSecreto}?`);
+    
+    if (jugador) {
+        sortearAmigo();
+        return;
+    }
+
+    mostrarResultado(amigoSecreto);
+    participantes.splice(indice, 1);
+}
+
+function mostrarResultado(amigoSecreto) {
+    let resultado = document.getElementById("resultado");
+    resultado.innerHTML = "";
+
+    let item = document.createElement("li");
+    item.textContent = `Tu amigo secreto es: ${amigoSecreto}`;
+    resultado.appendChild(item);
+}
