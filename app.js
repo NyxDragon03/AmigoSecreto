@@ -54,6 +54,7 @@ function sortearAmigo() {
 
     if (participantes.length === 0) { 
         alert("No hay más participantes para sortear.");
+        document.getElementById("reiniciar").style.display = "block"; //el botón de reinicio se muestra
         return;
     }
 
@@ -69,7 +70,7 @@ function sortearAmigo() {
 
     mostrarResultado(amigoSecreto);
     participantes.splice(indice, 1);
-}
+};
 
 function mostrarResultado(amigoSecreto) {
     let resultado = document.getElementById("resultado");
@@ -78,4 +79,16 @@ function mostrarResultado(amigoSecreto) {
     let item = document.createElement("li");
     item.textContent = `Tu amigo secreto es: ${amigoSecreto}`;
     resultado.appendChild(item);
+};
+
+function reiniciarSorteo() {
+    participantes = []; //vacia la lista de participantes
+    sortear = false; //reinicia la validación del primer sorteo
+
+    //borra las listas
+    document.getElementById("listaAmigos").innerHTML = "";
+    document.getElementById("resultado").innerHTML = "";
+
+    //oculta el botón de reinicio nuevamente
+    document.getElementById("reiniciar").style.display = "none";
 }

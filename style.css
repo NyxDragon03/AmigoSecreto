@@ -180,6 +180,19 @@ ul {
     border-color: #E10022;
 }
 
+/*boton de reinicio*/
+.button-reset {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px 40px;
+    color: var(--color-text);
+    background-color: var(--color-primary);
+    border-color: #8b3dff;
+    font-family: "Delius Swash Caps", serif;
+    font-size: 20px;
+}
+
 @media (max-width:768px){
     .amigos{
         width: 45%;
