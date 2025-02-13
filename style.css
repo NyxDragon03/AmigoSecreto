@@ -184,4 +184,8 @@ ul {
     .amigos{
         width: 45%;
     }
+
+    .main-title{
+        font-size: 36px;
+    }
 }
